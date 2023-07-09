@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #FFFAF0;
+}
+
+.navegacion{
+    background-color: #B0B689;
+    padding: 4px;
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 48px);
+    background: linear-gradient(rgba(0, 0, 0, 0.485),rgba(0, 0, 0, 0.542)) ,url(./percheros.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.hero h1{
+    color: #ececec;
+    font-size: 4rem;
+}
+
+.hero p{
+    color: #ececec;
+    font-size: 1rem;
+}
+
+.nueva-coleccion{
+    width: 100%;
+    height: 100vh;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    max-width: 1100px;
+}
+
+.tarjeta{
+    width: 50%;
+    margin: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color:#ececec;
+    box-shadow: 0px 1px 10px rgba( 0, 0, 0, 0.2 );
+    cursor: default;
+}
+
+.tarjeta img{
+    width: 100%;
+    height: 290px;
+}
+
+.tarjeta .contenido{
+    padding: 15px;
+    text-align: center;
+}
+
+.tarjeta .contenido p{
+    line-height: 1.5;
+    color: #1c1c1c;
+}
+
+.footer{
+    background-color: #B0B689;
+    text-align: center;
+}
