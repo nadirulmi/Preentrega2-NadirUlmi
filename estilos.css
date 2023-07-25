@@ -14,6 +14,8 @@ body{
     padding: 4px;
 }
 
+/*HERO SECCION*/
+
 .hero{
     display: flex;
     flex-direction: column;
@@ -21,7 +23,7 @@ body{
     align-items: center;
     width: 100%;
     height: calc(100vh - 48px);
-    background: linear-gradient(rgba(0, 0, 0, 0.485),rgba(0, 0, 0, 0.542)) ,url(./percheros.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.485),rgba(0, 0, 0, 0.542)) ,url(./imagenes/percheros.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -38,43 +40,118 @@ body{
     font-size: 1rem;
 }
 
-.nueva-coleccion{
-    width: 100%;
-    height: 100vh;
+.ver-carrito {
+    cursor: pointer;
+    padding: 2px;
 }
 
-.container{
-    width: 100%;
+/*productos*/
+
+.tienda-contenido{
     display: flex;
-    max-width: 1100px;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    margin: 30px;
+    padding: 10px;
 }
 
-.tarjeta{
-    width: 50%;
-    margin: 20px;
-    border-radius: 8px;
-    overflow: hidden;
-    background-color:#ececec;
+.card{
     box-shadow: 0px 1px 10px rgba( 0, 0, 0, 0.2 );
-    cursor: default;
-}
-
-.tarjeta img{
-    width: 100%;
-    height: 290px;
-}
-
-.tarjeta .contenido{
-    padding: 15px;
+    background-color:#daddca;
+    max-width: 300px;
+    margin: auto;
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.tarjeta .contenido p{
-    line-height: 1.5;
-    color: #1c1c1c;
+.card img{
+    width: 100%;
+    height: 260px;
 }
 
+.precio{
+    font-size: 18px;
+}
+
+.card button{
+    border: none;
+    background-color: #8e936f;
+    padding: 12px;
+}
+
+.card button:hover{
+    background-color: #ececec;
+    color:#6C7246;
+}
+
+
+/*modal seccion*/
+.modal-container {
+    width: 80%;
+    margin: 0 10%;
+    max-height: 82vh;
+    color: #fff;
+    background-color:#E9EDC9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    overflow: auto;
+    top: 12vh;
+    scrollbar-color: none;
+  }
+  
+  .modal-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content:space-around;
+    background-color:#60653E;
+    color: #fff;
+    width: 100%;
+  }
+  
+  .modal-header-button {
+    cursor: pointer;
+    font-size: 30px;
+    margin: 10px;
+  }
+  
+  .modal-container > .modal-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: 20px;
+  }
+  
+  .modal-container > div > img {
+    height: 200px;
+    width: 200px;
+  }
+
+  .carrito-letra{
+    color: black;
+    margin: 10px;
+  }
+  
+  .total-carrito {
+    font-size: 25px;
+    padding: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+    color: black;
+  }
+
+  .eliminar-producto{
+    cursor: pointer;
+  }
+
+  /*Footer seccion*/
 .footer{
-    background-color: #B0B689;
+    background-color:#B0B689;
     text-align: center;
 }
