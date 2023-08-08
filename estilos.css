@@ -150,6 +150,19 @@ body{
     cursor: pointer;
   }
 
+  /*contador del carrito*/
+  .cantidad-carrito{
+    background-color:#653e3e;
+    color: white;
+    border-radius: 40%;
+    font-size: 12px;
+    display: none;
+    position: absolute;
+    padding: 4px;
+    right: 14px;
+    top: 37px;
+  }
+
   /*Footer seccion*/
 .footer{
     background-color:#B0B689;

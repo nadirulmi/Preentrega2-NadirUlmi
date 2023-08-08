@@ -34,6 +34,7 @@ modalHeader.append(modalButton);
      let eliminar = document.createElement("span")
      eliminar.innerText = "❌"
      eliminar.className = "eliminar-producto"
+     eliminar.id = prenda.id
      carritoContent.append(eliminar)
 
      eliminar.addEventListener("click", eliminarProducto)
@@ -50,12 +51,20 @@ const total = carrito.reduce((acc,el)=> acc + el.precio, 0);
 verCarrito.addEventListener("click",pintarCarrito)
     
 //Función para eliminar producto del carrito//
-const eliminarProducto = () =>{
-    const foundId = carrito.find((element) => element.id);
+const eliminarProducto = (e) => {
+    carrito = carrito.filter((item) => {
 
-    carrito = carrito.filter((carritoId) =>{
-        return carritoId !== foundId;
+        return item.id != e.target.id;
+
     });
 
     pintarCarrito()
+
+} 
+
+
+//mostrar contador de productos en el icono carrito
+const carritoContador = () => {
+    cantidadCarrito.style.display = "block"
+    cantidadCarrito.innerText = carrito.length;
 }

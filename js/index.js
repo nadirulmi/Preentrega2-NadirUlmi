@@ -1,7 +1,8 @@
 
-const tiendaContenido = document.getElementById("tiendaContenido");
-    const verCarrito = document.getElementById("verCarrito");
+const tiendaContenido = document.getElementById("tiendaContenido")
+    const verCarrito = document.getElementById("verCarrito")
     const modalContainer = document.getElementById("modal-container")
+    const cantidadCarrito = document.getElementById("cantidadCarrito")
 
     //utilizando get item para que el carrito siga al refrescar la página//
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
@@ -31,7 +32,7 @@ const tiendaContenido = document.getElementById("tiendaContenido");
             });
             console.log(carrito)
             carritoLocal();
-            
+            carritoContador();
         });
     });
 
