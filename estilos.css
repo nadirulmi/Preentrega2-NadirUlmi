@@ -11,7 +11,9 @@ body{
 
 .navegacion{
     background-color: #B0B689;
-    padding: 4px;
+    position: fixed;
+    margin-top: 25px;
+    padding-top: 30px;
 }
 
 /*HERO SECCION*/
@@ -22,7 +24,7 @@ body{
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: calc(100vh - 48px);
+    height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.485),rgba(0, 0, 0, 0.542)) ,url(./imagenes/percheros.jpg);
     background-position: center;
     background-repeat: no-repeat;

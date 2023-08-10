@@ -24,12 +24,19 @@ const tiendaContenido = document.getElementById("tiendaContenido")
             tiendaContenido.append(contenido);
     
             let comprar = document.createElement("button")
-            comprar.innerText = "comprar";
+            comprar.innerText = "Comprar";
             comprar.className = "comprar"
     
             contenido.append(comprar);
     
             comprar.addEventListener("click", ()=>{
+                //sweet alert//
+                Swal.fire({
+                    title: "Se añadió al carrito!",
+                    icon: "success",
+                    showConfirmButton: false,
+                    timer: 1500
+                })
                 carrito.push({
                     id: prenda.id,
                     img: prenda.img,
@@ -39,6 +46,7 @@ const tiendaContenido = document.getElementById("tiendaContenido")
                 carritoLocal();
                 carritoContador();
             });
+
         });
     }
 
@@ -48,4 +56,5 @@ const tiendaContenido = document.getElementById("tiendaContenido")
     const carritoLocal = () => {
         localStorage.setItem("carrito",JSON.stringify(carrito));
     }
+
 
