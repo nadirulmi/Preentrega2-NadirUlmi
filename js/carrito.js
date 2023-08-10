@@ -28,16 +28,16 @@ modalHeader.append(modalButton);
         <h3 class= "carrito-letra"> ${prenda.nombre}</h3>
         <p class = "carrito-letra">$${prenda.precio}</p>
     `;
-     modalContainer.append(carritoContent)
+    modalContainer.append(carritoContent)
 
         //boton para eliminar un producto//
-     let eliminar = document.createElement("span")
-     eliminar.innerText = "❌"
-     eliminar.className = "eliminar-producto"
-     eliminar.id = prenda.id
-     carritoContent.append(eliminar)
+    let eliminar = document.createElement("span")
+    eliminar.innerText = "❌"
+    eliminar.className = "eliminar-producto"
+    eliminar.id = prenda.id
+    carritoContent.append(eliminar)
 
-     eliminar.addEventListener("click", eliminarProducto)
+    eliminar.addEventListener("click", eliminarProducto)
         })
     
 const total = carrito.reduce((acc,el)=> acc + el.precio, 0);
@@ -57,7 +57,7 @@ const eliminarProducto = (e) => {
         return item.id != e.target.id;
 
     });
-
+    carritoContador();
     pintarCarrito()
 
 } 
